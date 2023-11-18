@@ -1,0 +1,462 @@
+*{
+    margin: 0%;
+    padding: 0%;
+box-sizing: border-box;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+}
+#loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: #c5c0c0;
+}
+#loader #topheading{
+position: absolute;
+top: 5%;
+left: 50%;
+transform: translate(-50%,0);
+}
+#topheading h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-family:"Josefin Sans";
+   
+}
+#loader #intro{
+    color: #78cfdf;
+}
+#loader h1{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-family:"Josefin Sans";
+      font-size: 4vw;
+    
+}
+.reveal .parent {
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    width: 100%;
+
+}
+.reveal .parent .child{
+    display: block;
+}
+.parent .child span{
+    display: inline-block;
+}
+.child span{
+display: inline-block;
+}
+#loader2{
+
+position: absolute;
+top: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #78cfdf;
+}
+#mainload{
+    position: absolute;
+    top: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #ecf1f1;
+    }
+#home{
+    width: 100%;
+    height: 170vh;
+    background-color:#fff;
+
+}
+#home #nav{
+    display:flex;
+   box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 3vw;
+    width: 100%;
+    height: 90px;
+    background-color: #f6fafa;
+}
+#nav a{
+    text-decoration: none;
+    text-transform:uppercase ;
+    font-size: 15px;
+    color: #050404;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+#nav a:hover{
+   color: #38595f;
+text-decoration: underline;
+    transition: all ease 0.6s;
+}
+#home #creating{
+    font-family:"Josefin Sans Thin" ;
+    font-size: 90px;
+    margin: 17px 0 0 15%;
+    margin-left: 9vh;
+    color: #111;  
+}
+#creating #side{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-left: 55%;
+    font-weight: 200;
+    color:#8a8686;
+}
+#home #dev{
+    font-family:"Josefin Sans Thin";
+    font-size: 130px;
+    margin: 5px 0 0 ;
+    color: #111;  
+}
+#home #anim{
+    font-family:"Josefin Sans Thin";
+    font-size: 100px;
+   margin-left: 130px;
+
+}
+#home span{
+    color: #2ac5e0;
+    -webkit-text-stroke: 0.3vw #070808;
+}
+#home span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    height: 16%;
+    color:  #2ac5e0;
+    -webkit-text-stroke: 0.3vw #2ac5e0;
+    border-right: 0px solid #e4e7e7;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 0%;
+    }
+    40%{
+        width:50%;
+    }
+}
+#home #biotext{
+    margin-top: 6vw;
+    margin-left: 22px;
+    font-size: 5vh;
+    letter-spacing: 1px;
+}
+#bio .won{
+    color:#0e8094;
+    display: inline;
+}
+
+#bio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25vh;
+    width: 100%;
+    padding: 0 7vw;
+}
+ #card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 300px;
+ }
+#card #imgcont{
+    position: absolute;
+    margin-top: 12vw;
+    width: 26vw;
+    height: 35vw;
+    border-radius: 1vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 2, 0.22, 4) 3s;
+}
+ #card #imgcont:hover{
+    filter: grayscale(0%);
+    transform: scale(1.3);
+ }
+#card #imgcont:nth-child(1){
+    transform: translate(-10%,-10%) rotate(-20deg);
+    background-image: url(https://images.unsplash.com/photo-1569741264021-310a5f4bab93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1414&q=80);
+    background-size: cover;
+    background-position: center;
+}
+#card #imgcont:nth-child(2){
+    transform: translate(0%,0%) rotate(-15deg);
+background-image: url(https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80);
+background-size: cover;
+background-position: center;
+}
+#card #imgcont:nth-child(3){
+    transform: translate(20%, 12%) rotate(-6deg);
+    background-image: url(https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80);
+background-size: cover;
+background-position: center;
+}
+
+#work{
+    width: 100%;
+    margin-top: 15vh;
+    height: 190vh;
+    background-color:#f2f2f2;
+    align-items: center;
+    justify-content: center;
+}
+#work h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    transform: rotate(-180deg);
+}
+
+ #work #workrow h1{
+   font-family: "Josefin Sans Thin";
+   font-size: 7vw;
+   padding-top: 120px;
+   display: flex;
+   font-weight: 800;
+}
+#work #workrow #k{
+    font-family: "Josefin Sans";
+    font-size: 7vw;
+    color: #0e8094;
+ }
+
+#images{
+    position: relative;
+    width: 100%;  
+}
+#work #imgleft{
+    width: 30%;
+    height: 35%;
+    border-radius: 10%;
+    margin-top: 8%;
+  margin-left: 90px;
+    background-size: cover;
+ } 
+ #work #imgright{
+    width: 30%;
+    height: 35%;
+    margin-left:600px;
+    border-radius: 10%;
+    background-size: cover;
+ }
+#cursor div{
+    opacity: 1;
+    position: absolute;
+}
+#elem{
+    width: 100%;
+    position: relative;
+}
+#cursor .crow{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: .7vw;
+}
+.crow .circle{
+    width: 20vw;
+    height: 3vw;
+ border: 2px solid #fff;
+ border-radius: 50%;  
+}
+.crow .capsule{
+  padding: .7vw 3vw;
+ border: 2px solid #fff;
+ border-radius: 100px;
+
+}
+
+#elem img{
+    width: 10%;
+    height: 140px;
+    opacity: 0;
+    animation:an 3s linear infinite;
+    position: absolute;
+}
+#elem img:nth-child(2){
+    animation-delay: 1s;
+}
+
+#elem img:nth-child(3){
+    animation-delay: 2s;
+}
+@keyframes an {
+
+    0%{
+        opacity: 1;
+    }
+    20%
+    {
+        opacity: 1;
+    }40%
+    {
+        opacity: 0;
+    }60%
+    {
+        opacity: 0;
+    } 
+}
+  .container {
+    height: 150vh;
+    background-color:#253b39;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .footer {
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #fhead h1{
+    padding-top: 70px;
+    font-family:"Josefin Sans Thin";
+    font-size: 14vh;
+  }
+  .footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer-links #links {
+    width: 50vh;
+    height: 19vh;
+    margin-top: 80px;
+    background-color:#253b39;
+    font-family:"Josefin Sans Thin";
+    font-size: 4vh;
+    padding-top: 10px;
+    justify-content: center;
+     border: 1px solid #fff;
+     border-radius: 100px;
+  }
+  .footer-links #links:hover{
+    background-color: #4ca79f;
+    transition: 0.5s all ease ;
+    font-size: 4.1vh;
+  }
+  .footer-links li {
+    margin: 10px 0;
+  }
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .footer-links a:hover 
+  {
+  background-color: #0e8094;
+  }
+  #links button{
+    width: 50vh;
+    height: 19vh;
+    font-family:"Josefin Sans Thin";
+    font-size: 4vh;
+    padding-top: 40px;
+    justify-content: center;
+     border: 1px solid #fff;
+     border-radius: 100px; 
+     position: relative;
+  }
+  .footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+h3{
+    font-family:"Josefin Sans Thin";
+    margin-top: 450px;
+    margin-right: 1000px;
+    font-size: 2.4vh;
+    color: rgb(116, 76, 31);
+}
+ ul {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    margin-top: 58%;
+    transform: translate(-50%, -50%);
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 200px;
+    height: 80px;
+    background-color:#253b39;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 60px;
+    display: block;
+    position: relative;
+    border: 1px solid #fff;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  ul li a {
+    font-family:"Josefin Sans Thin";
+    font-size: 35px;
+  } 
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: -1;
+  }
+  
+  ul li a:hover:before {
+    top: 0%;
+  }
+  
+  ul li:nth-child(1) a:before{
+    background: #0e8094;
+  }
+  
+  ul li:nth-child(2) a:before{
+    background: #0e8094;
+  }
+  
+  ul li:nth-child(3) a:before {
+    background: #0e8094;
+  }
+  
+  ul li:nth-child(4) a:before {
+    background: #0e8094;
+  }
