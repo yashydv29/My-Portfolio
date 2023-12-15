@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />      <!-- bootstrap css -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>My Portfolio</title>
 </head>
 <body>
     <div id="main">
@@ -30,12 +33,11 @@
             <h1  id="anim"><span data-text="Designer" id="vd">Designer</span> </h1>
             <h1 class="reveal" id="dev">and Devloper</h1>
            <div id="back">
-
 </div>
         </div>
         <div id="bio">
             <div id="biotext">
-                <p>I AM YASH YADAV, <br> I CREATE 
+                <p id="p">I AM YASH YADAV, <br> I CREATE 
                     <div class="won">WONDROUS</div>
                      FUNCTIONAL & <br>
                     VISUALLY PLEASING INTERFACES <br>
@@ -51,7 +53,8 @@
             <div id="workrow">
                 <h1>Feat Wor<div id="k">k</div>s</h1>
                 <div id="images">
-                    <img data-index="0"  class="cont" id="imgleft" src="https://abhishekjha.me/aeizei.7edf201c.png" alt="hover over me">
+                   <a href="http://yashyadav.000.pe/?i=1"><img data-index="0"  class="cont" id="imgleft" src="https://abhishekjha.me/aeizei.7edf201c.png" alt="hover over me"></a> 
+                  
                     <img data-index="1"  class="cont" id="imgright" src="https://abhishekjha.me/visavia4.631e000e.png" alt="">
                 </div>
             </div>
@@ -60,11 +63,8 @@
             <div id="skillrow">
                 <h1>Skil<div id="k">l</div>s</h1>
             </div>
-           
-            <div class="skilltype">
-               
-                <div class="skill">
-                   HTML  
+            <div class="skilltype">  
+                <div class="skill">HTML
                   </div>  
                   <div class="skill">
                     CSS
@@ -115,49 +115,21 @@
                 </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+<!-- Scroll Trigger is needed for Scroll Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+
    <script src="script.js"></script>
 </body>
 </html>
