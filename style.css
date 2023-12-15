@@ -213,7 +213,6 @@ background-position: center;
 background-size: cover;
 background-position: center;
 }
-
 #work{
     width: 100%;
     margin-top: 15vh;
@@ -257,7 +256,7 @@ background-position: center;
     display: flex;
     font-weight: 800;
  }
-
+ 
  #skills .skilltype .skill{
         width: 30vw;
         height: 100px;
@@ -273,6 +272,22 @@ background-position: center;
        margin-left: 140vh; 
        margin-bottom: 3px;
  }
+.lulu{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+ .text-with-stroke {
+    position: absolute;
+    font-size: 25vh;
+    color: white; /* Text color */
+    text-shadow: -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                 -1px 1px 0 #000,
+                 1px 1px 0 #000; /* Creates the stroke effect */
+
+  }
+  
 
  .skill {
     position: relative;
