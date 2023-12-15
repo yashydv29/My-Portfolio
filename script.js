@@ -1,11 +1,10 @@
+ 
 function RevealToSpan(){
 
 document.querySelectorAll(".reveal")
  .forEach(elem =>{
-    //create two spans
 var parent=document.createElement("span");
 var child=document.createElement("span");
-//setting class in both spant tags which are created above
 parent.classList.add("parent");
 child.classList.add("child");
 
@@ -17,7 +16,6 @@ elem.appendChild(parent);
 
  });
 }
-
 function loader(){
 
 gsap.from(".child span",{
@@ -53,11 +51,48 @@ gsap.to("#loader2",{
        ease: Circ.easeInOut,
        onComplete:function(){
         homeAnimation();
+        texteffect();
        }
    })
+  }
+function texteffect(){
+
+  Shery.imageMasker("#imgleft", {
+    mouseFollower: true,
+    text: "Weather App",
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+
+  Shery.imageMasker("#imgright", {
+    mouseFollower: true,
+    text: "Blog Site",
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+
+  Shery.hoverWithMediaCircle(".lulu",{
+    images: ["effect1.jpg", "effect2.jpg", "effect3.jpg"] ,
+
+  });
+
+  Shery.mouseFollower({
+    // debug:true,
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 0.7,
+  });
+
+ 
+
+  Shery.imageEffect(".lulu", {
+    style: 3 ,
+    // debug: true,
+  });
+   
+
 
 }
-
 function homeAnimation(){
     gsap.to(" #home .parent .child",{
         y:0,
@@ -65,8 +100,9 @@ function homeAnimation(){
         ease: Circ.easeInOut
     })
 }
-
 function workImages(){
+
+
 const cont=document.querySelector('#work');
 const leftimg=document.getElementById('imgleft');
 const rightimg=document.getElementById('imgright');
@@ -89,7 +125,73 @@ rightimg.addEventListener('mouseout',function(){
 });
 }
 
+function imgageffects(){
+
+gsap.set("#distortedImage", { scaleX: 1, scaleY: 1, rotation: 0 });
+
+const image = document.getElementById("imgleft");
+
+image.addEventListener("mouseenter", function() {
+  gsap.to("#imgleft", {
+    duration: 0.5,
+    scaleX: 1.1, 
+    scaleY: 1,
+    rotation: 2,
+    ease: "power1.inOut"
+  });
+});
+
+image.addEventListener("mouseleave", function() {
+  gsap.to("#imgleft", {
+    duration: 0.5,
+    scaleX: 1, 
+    scaleY: 1,
+    rotation: 0, 
+    ease: "power1.inOut"
+  });
+});
+
+const imager = document.getElementById("imgright");
+
+imager.addEventListener("mouseenter", function() {
+  gsap.to("#imgright", {
+    duration: 0.5,
+    scaleX: 1.11, 
+    scaleY: 1, 
+    rotation: 2, 
+    ease: "power1.inOut"
+  });
+});
+
+imager.addEventListener("mouseleave", function() {
+  gsap.to("#imgright", {
+    duration: 0.5,
+    scaleX: 1, 
+    scaleY: 1, 
+    rotation: 0, 
+    ease: "power1.inOut"
+  });
+});
+}
+const items = document.querySelectorAll('.item')
+
+items.forEach((el) => {
+  const image = el.querySelector('img')
+  
+  el.addEventListener('mouseenter', (e) => {
+    gsap.to(image, { autoAlpha: 1 })
+  })
+  
+   el.addEventListener('mouseleave', (e) => {
+    gsap.to(image, { autoAlpha: 0 })
+  })
+  
+  el.addEventListener('mousemove', (e) => {
+    gsap.set(image, { x: e.offsetX - 200 })
+  })
+})
+
 RevealToSpan();
 loader();
 workImages();
-
+imgageffects();
