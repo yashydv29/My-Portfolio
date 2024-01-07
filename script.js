@@ -1,4 +1,11 @@
- 
+    function scrollToSection() {
+   var bio = document.getElementById(bio);
+bio.scrollIntoView({ behavior: 'smooth' });
+    }
+function scrollToSection(){
+var social = document.getElementById(social);
+work.scrollIntoView({ behavior: 'smooth' });
+}
 function RevealToSpan(){
 
 document.querySelectorAll(".reveal")
